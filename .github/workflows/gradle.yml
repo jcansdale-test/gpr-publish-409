@@ -20,6 +20,7 @@ jobs:
 
     - name: Publish with Gradle
       env:
+        OWNER: ${{ github.repository_owner }}
         USERNAME: token
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gradle publish
