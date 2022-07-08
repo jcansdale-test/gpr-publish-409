@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        buildVersion = 'test-' + new Date().format('yyyyMMddHHmmss')
+        buildVersion = System.getenv("BUILD_VERSION")
     }
 }
 
