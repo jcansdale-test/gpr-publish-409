@@ -29,5 +29,5 @@ jobs:
         OWNER: ${{ github.repository_owner }}
         USERNAME: token
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BUILD_VERSION: 1.0.${{ github.run_number }}
+        BUILD_VERSION: 1.${{ github.run_number }}.${{ matrix.try }}
       run: gradle publish
