@@ -30,4 +30,5 @@ jobs:
         OWNER: ${{ github.repository_owner }}
         USERNAME: token
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BUILD_VERSION: 1.0.0
       run: gradle publish
