@@ -30,4 +30,4 @@ jobs:
         USERNAME: token
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BUILD_VERSION: 1.${{ github.run_number }}.${{ matrix.try }}
-      run: for i in {1..10}; do gradle publish || break; done
+      run: for i in {1..10}; do BUILD_VERSION=${{ github.run_number }}.${{ matrix.try }}.$i; gradle publish || break; done
